@@ -1,3 +1,4 @@
+
 'use server';
 /**
  * @fileOverview Un flujo de Genkit para generar el prompt de un cromo oficial.
@@ -53,6 +54,11 @@ function buildPrompt(d: AiKitTransformationInput) {
     ? 'Encuadre de medio cuerpo, hombros y guantes parcialmente visibles, mirada concentrada hacia la cámara.'
     : 'Encuadre de medio cuerpo / busto, hombros incluidos, mirando ligeramente hacia la cámara.';
 
+  // Lógica específica para destacar el apellido si es posible o simplemente seguir el formato solicitado
+  const nameParts = d.name.split(' ');
+  const firstName = nameParts[0];
+  const lastName = nameParts.slice(1).join(' ');
+
   return `Generá una figurita coleccionable estilo Panini FIFA World Cup, manteniendo EXACTAMENTE este diseño visual fijo (no debe cambiar la estructura entre países):
 
 DISEÑO FIJO DE LA FIGURITA (Estructura base):
@@ -99,9 +105,7 @@ const aiKitTransformationFlow = ai.defineFlow(
     outputSchema: AiKitTransformationOutputSchema,
   },
   async (input) => {
-    // Simplemente devolvemos el prompt construido
     const dynamicPrompt = buildPrompt(input);
-
     return {
       generatedPrompt: dynamicPrompt,
     };

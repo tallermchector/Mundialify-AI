@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useRef } from 'react';
@@ -6,15 +7,17 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Upload, RefreshCcw, Sparkles, Trophy, UserCircle } from 'lucide-react';
+import { Textarea } from '@/components/ui/textarea';
+import { Upload, RefreshCcw, Sparkles, Trophy, UserCircle, Copy, Check } from 'lucide-react';
 import { normalizeName, resizeImage } from '@/lib/image-utils';
 import { useToast } from '@/hooks/use-toast';
+import { transformPhotoWithKit } from '@/ai/flows/ai-kit-transformation';
 
 const COUNTRIES = [
+  { label: "Uruguay", value: "URUGUAY", code: "UY" },
   { label: "Argentina", value: "ARGENTINA", code: "AR" },
   { label: "Brasil", value: "BRASIL", code: "BR" },
   { label: "Francia", value: "FRANCIA", code: "FR" },
-  { label: "Uruguay", value: "URUGUAY", code: "UY" },
   { label: "España", value: "ESPAÑA", code: "ES" },
   { label: "Inglaterra", value: "INGLATERRA", code: "GB-ENG" },
   { label: "Alemania", value: "ALEMANIA", code: "DE" },
@@ -26,16 +29,21 @@ const COUNTRIES = [
 export const MundialifyApp: React.FC = () => {
   const { toast } = useToast();
   const [step, setStep] = useState(1);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedPrompt, setGeneratedPrompt] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
+  
   const [formData, setFormData] = useState({
-    name: '',
-    team: 'ARGENTINA',
-    teamCode: 'AR',
+    name: 'Santiago Sánchez',
+    team: 'URUGUAY',
+    teamCode: 'UY',
     position: 'Delantero',
     height: '1.75',
     weight: '72',
     birth: '24/06/1987',
-    club: 'Inter Miami',
+    club: 'Peñarol (URU)',
   });
+  
   const [photo, setPhoto] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -43,7 +51,7 @@ export const MundialifyApp: React.FC = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ 
       ...prev, 
-      [name]: name === 'name' ? normalizeName(value) : value 
+      [name]: name === 'name' ? value : value 
     }));
   };
 
@@ -62,7 +70,7 @@ export const MundialifyApp: React.FC = () => {
       const reader = new FileReader();
       reader.onload = async (event) => {
         const base64 = event.target?.result as string;
-        const resized = await resizeImage(base64, 1200); // Mayor calidad para el canvas
+        const resized = await resizeImage(base64, 1200);
         setPhoto(resized);
         setStep(3);
       };
@@ -76,18 +84,51 @@ export const MundialifyApp: React.FC = () => {
     }
   };
 
+  const handleGeneratePrompt = async () => {
+    setIsGenerating(true);
+    try {
+      const result = await transformPhotoWithKit({
+        ...formData,
+        photoDataUri: photo || '',
+      });
+      setGeneratedPrompt(result.generatedPrompt);
+      setStep(4);
+    } catch (error) {
+      toast({
+        variant: 'destructive',
+        title: 'Error',
+        description: 'No se pudo generar el prompt.'
+      });
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const copyToClipboard = () => {
+    if (generatedPrompt) {
+      navigator.clipboard.writeText(generatedPrompt);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+      toast({
+        title: "¡Copiado!",
+        description: "El prompt ha sido copiado al portapapeles."
+      });
+    }
+  };
+
   const reset = () => {
     setStep(1);
     setPhoto(null);
+    setGeneratedPrompt(null);
     setFormData({ 
-      name: '', 
-      team: 'ARGENTINA', 
-      teamCode: 'AR',
+      name: 'Santiago Sánchez', 
+      team: 'URUGUAY', 
+      teamCode: 'UY',
       position: 'Delantero', 
       height: '1.75', 
       weight: '72', 
       birth: '24/06/1987', 
-      club: 'Inter Miami' 
+      club: 'Peñarol (URU)' 
     });
   };
 
@@ -104,10 +145,10 @@ export const MundialifyApp: React.FC = () => {
         <div className="lg:col-span-7 space-y-6">
           <div className="space-y-2">
             <h1 className="text-4xl lg:text-5xl font-headline font-black italic text-white tracking-tighter uppercase leading-tight">
-              CROMO <span className="text-panini-yellow">GENERATOR</span>
+              MUNDIALIFY <span className="text-panini-yellow">2026</span>
             </h1>
             <p className="text-muted-foreground text-md uppercase tracking-widest font-bold">
-              EDICIÓN COLECCIONISTA 2026
+              GENERADOR DE PROMPTS Y CROMOS HQ
             </p>
           </div>
 
@@ -137,10 +178,10 @@ export const MundialifyApp: React.FC = () => {
                     <Input 
                       id="name" 
                       name="name" 
-                      placeholder="Ej: LIONEL MESSI" 
+                      placeholder="Ej: SANTIAGO SÁNCHEZ" 
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="bg-background/50 uppercase h-12"
+                      className="bg-background/50 h-12 font-bold"
                     />
                   </div>
                   <div className="space-y-2">
@@ -208,7 +249,7 @@ export const MundialifyApp: React.FC = () => {
               <div className="space-y-4 animate-in slide-in-from-right-4 duration-300">
                 <div className="flex items-center gap-2 mb-2">
                   <UserCircle className="w-5 h-5 text-albiceleste" />
-                  <h3 className="font-headline font-bold text-xl uppercase italic">Retrato Oficial</h3>
+                  <h3 className="font-headline font-bold text-xl uppercase italic">Retrato y Prompt</h3>
                 </div>
                 
                 <div 
@@ -220,7 +261,7 @@ export const MundialifyApp: React.FC = () => {
                       <img src={photo} alt="Preview" className="absolute inset-0 w-full h-full object-cover opacity-60" />
                       <div className="z-10 flex flex-col items-center">
                         <Sparkles className="w-12 h-12 text-panini-yellow mb-2 animate-pulse" />
-                        <p className="font-bold text-white uppercase tracking-tighter">Imagen Lista para Procesar</p>
+                        <p className="font-bold text-white uppercase tracking-tighter">Foto Lista</p>
                       </div>
                     </>
                   ) : (
@@ -228,32 +269,76 @@ export const MundialifyApp: React.FC = () => {
                       <div className="bg-white/10 p-4 rounded-full mb-3 group-hover:scale-110 transition-transform">
                         <Upload className="w-8 h-8 text-white" />
                       </div>
-                      <p className="font-bold text-white/60">Haz clic para subir tu foto</p>
+                      <p className="font-bold text-white/60">Sube tu foto para el prompt</p>
                     </>
                   )}
                   <input type="file" ref={fileInputRef} className="hidden" accept="image/*" onChange={handlePhotoUpload} />
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <div className="flex gap-2">
-                    <Button variant="ghost" onClick={() => setStep(2)} className="flex-1">Atrás</Button>
-                    <Button 
-                      disabled={!photo} 
-                      onClick={() => setStep(1)}
-                      className="flex-[2] bg-white/5 hover:bg-white/10 text-white font-headline font-bold uppercase py-6"
-                    >
-                      <RefreshCcw className="w-4 h-4 mr-2" />
-                      Reiniciar Datos
-                    </Button>
-                  </div>
+                  <Button 
+                    disabled={!photo || isGenerating} 
+                    onClick={handleGeneratePrompt}
+                    className="w-full bg-panini-yellow hover:bg-panini-yellow/90 text-panini-midnight font-headline font-black uppercase py-8 text-lg"
+                  >
+                    {isGenerating ? (
+                      <div className="flex items-center gap-2">
+                        <RefreshCcw className="w-5 h-5 animate-spin" />
+                        CONSTRUYENDO PROMPT...
+                      </div>
+                    ) : (
+                      <>
+                        <Sparkles className="w-6 h-6 mr-2" />
+                        GENERAR PROMPT OFICIAL
+                      </>
+                    )}
+                  </Button>
+                  <Button variant="ghost" onClick={() => setStep(2)}>Atrás</Button>
                 </div>
+              </div>
+            )}
+
+            {step === 4 && generatedPrompt && (
+              <div className="space-y-4 animate-in zoom-in-95 duration-300">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-panini-yellow" />
+                    <h3 className="font-headline font-bold text-xl uppercase italic">Prompt Generado</h3>
+                  </div>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={copyToClipboard}
+                    className="bg-white/5 hover:bg-white/10 text-white border-white/10"
+                  >
+                    {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
+                    {copied ? 'Copiado' : 'Copiar'}
+                  </Button>
+                </div>
+                
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-panini-yellow/5 rounded-xl blur-xl" />
+                  <Textarea 
+                    value={generatedPrompt} 
+                    readOnly 
+                    className="relative bg-panini-midnight/80 border-panini-yellow/20 text-panini-yellow/90 font-mono text-xs h-[350px] leading-relaxed resize-none p-4 rounded-xl"
+                  />
+                </div>
+
+                <Button 
+                  onClick={reset}
+                  className="w-full bg-white/5 hover:bg-white/10 text-white font-headline font-bold uppercase py-6"
+                >
+                  <RefreshCcw className="w-4 h-4 mr-2" />
+                  Crear Otro Jugador
+                </Button>
               </div>
             )}
           </div>
 
           <div className="p-4 bg-panini-midnight/60 border border-white/5 rounded-xl text-center">
              <p className="text-[10px] text-muted-foreground leading-relaxed uppercase font-medium tracking-widest">
-               Renderizado local via Canvas API • Resolución 800x1100 px • Sin almacenamiento en servidor
+               Renderizado local via Canvas API • Prompt Builder v2.0 • Sin almacenamiento de datos
              </p>
           </div>
         </div>
