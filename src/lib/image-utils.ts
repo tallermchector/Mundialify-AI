@@ -1,3 +1,4 @@
+
 /**
  * Resizes an image to a maximum dimension while maintaining aspect ratio
  */
@@ -45,13 +46,11 @@ export function normalizeName(name: string): string {
     .join(' ');
 }
 
-/**
- * Formats a metric value
- */
-export function formatMetric(value: string | number, unit: 'm' | 'kg'): string {
-  if (unit === 'm') {
-    const num = parseFloat(String(value));
-    return isNaN(num) ? '-' : num.toFixed(2) + ' m';
-  }
-  return value + ' kg';
-}
+export const formatHeight = (value: string) => {
+  let v = value.replace('.', ',').replace(/[^0-9,]/g, '');
+  return v.slice(0, 4);
+};
+
+export const formatWeight = (value: string) => {
+  return value.replace(/\D/g, '').slice(0, 3);
+};
