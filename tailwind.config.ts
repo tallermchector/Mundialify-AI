@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        headline: ['Space Grotesk', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -48,6 +48,15 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+        albiceleste: {
+          DEFAULT: '#75AADB',
+          dark: '#5a8ab8',
+        },
+        panini: {
+          red: '#E30613',
+          yellow: '#FFD700',
+          midnight: '#0A111F',
+        },
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',
@@ -88,10 +97,22 @@ export default {
             height: '0',
           },
         },
+        'shimmer': {
+          '0%': { transform: 'translateX(-100%) translateY(-100%) rotate(-45deg)', opacity: '0' },
+          '20%': { opacity: '0.4' },
+          '80%': { opacity: '0.4' },
+          '100%': { transform: 'translateX(100%) translateY(100%) rotate(-45deg)', opacity: '0' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'shimmer': 'shimmer 3s infinite linear',
+        'float': 'float 6s ease-in-out infinite',
       },
     },
   },
