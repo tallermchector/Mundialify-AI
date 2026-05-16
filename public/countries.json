@@ -1,0 +1,2112 @@
+[
+  {
+    "code": "AFG",
+    "name": "Afghanistan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/AFG.svg",
+    "bgColors": [
+      "#000000",
+      "#d32011",
+      "#007a36"
+    ]
+  },
+  {
+    "code": "ALB",
+    "name": "Albania",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ALB.svg",
+    "bgColors": [
+      "#ff0000",
+      "#000000",
+      "#ff0000"
+    ]
+  },
+  {
+    "code": "ALG",
+    "name": "Algeria",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ALG.svg",
+    "bgColors": [
+      "#0b8940",
+      "#e61413",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "ASA",
+    "name": "American Samoa",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ASA.svg",
+    "bgColors": [
+      "#00205b",
+      "#bf0a30",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "AND",
+    "name": "Andorra",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/AND.svg",
+    "bgColors": [
+      "#10069f",
+      "#fedd00",
+      "#da291c"
+    ]
+  },
+  {
+    "code": "ANG",
+    "name": "Angola",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ANG.svg",
+    "bgColors": [
+      "#cc092f",
+      "#ffcb00",
+      "#000000"
+    ]
+  },
+  {
+    "code": "AIA",
+    "name": "Anguilla",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/AIA.svg",
+    "bgColors": [
+      "#012169",
+      "#ffffff",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "ATG",
+    "name": "Antigua and Barbuda",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ATG.svg",
+    "bgColors": [
+      "#ce1126",
+      "#fcd116",
+      "#0072c6"
+    ]
+  },
+  {
+    "code": "ARG",
+    "name": "Argentina",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ARG.svg",
+    "bgColors": [
+      "#6da2d6",
+      "#aec6ea",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "ARM",
+    "name": "Armenia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ARM.svg",
+    "bgColors": [
+      "#d90012",
+      "#0033a0",
+      "#f2a800"
+    ]
+  },
+  {
+    "code": "ARU",
+    "name": "Aruba",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ARU.svg",
+    "bgColors": [
+      "#418fde",
+      "#ffd100",
+      "#ef3340"
+    ]
+  },
+  {
+    "code": "AUS",
+    "name": "Australia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/AUS.svg",
+    "bgColors": [
+      "#232c77",
+      "#e62a39",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "AUT",
+    "name": "Austria",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/AUT.svg",
+    "bgColors": [
+      "#bd1d1d",
+      "#d87c63",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "AZE",
+    "name": "Azerbaijan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/AZE.svg",
+    "bgColors": [
+      "#00b5e2",
+      "#ef3340",
+      "#509e2f"
+    ]
+  },
+  {
+    "code": "BAH",
+    "name": "Bahamas",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BAH.svg",
+    "bgColors": [
+      "#00778b",
+      "#ffc72c",
+      "#00778b"
+    ]
+  },
+  {
+    "code": "BHR",
+    "name": "Bahrain",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BHR.svg",
+    "bgColors": [
+      "#da291c",
+      "#ffffff",
+      "#da291c"
+    ]
+  },
+  {
+    "code": "BAN",
+    "name": "Bangladesh",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BAN.svg",
+    "bgColors": [
+      "#006747",
+      "#da291c",
+      "#006747"
+    ]
+  },
+  {
+    "code": "BRB",
+    "name": "Barbados",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BRB.svg",
+    "bgColors": [
+      "#00267f",
+      "#ffc726",
+      "#00267f"
+    ]
+  },
+  {
+    "code": "BLR",
+    "name": "Belarus",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BLR.svg",
+    "bgColors": [
+      "#ce1720",
+      "#ffffff",
+      "#007c30"
+    ]
+  },
+  {
+    "code": "BEL",
+    "name": "Belgium",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BEL.svg",
+    "bgColors": [
+      "#000000",
+      "#ffcd1c",
+      "#e7333f"
+    ]
+  },
+  {
+    "code": "BLZ",
+    "name": "Belize",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BLZ.svg",
+    "bgColors": [
+      "#003f87",
+      "#ce1126",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "BEN",
+    "name": "Benin",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BEN.svg",
+    "bgColors": [
+      "#008751",
+      "#fcd116",
+      "#e8112d"
+    ]
+  },
+  {
+    "code": "BER",
+    "name": "Bermuda",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BER.svg",
+    "bgColors": [
+      "#cf142b",
+      "#ffffff",
+      "#012169"
+    ]
+  },
+  {
+    "code": "BHU",
+    "name": "Bhutan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BHU.svg",
+    "bgColors": [
+      "#ffcd00",
+      "#ffffff",
+      "#ff671f"
+    ]
+  },
+  {
+    "code": "BOL",
+    "name": "Bolivia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BOL.svg",
+    "bgColors": [
+      "#d32011",
+      "#f0e53c",
+      "#00702d"
+    ]
+  },
+  {
+    "code": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BIH.svg",
+    "bgColors": [
+      "#294294",
+      "#5288c6",
+      "#ffd213"
+    ]
+  },
+  {
+    "code": "BOT",
+    "name": "Botswana",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BOT.svg",
+    "bgColors": [
+      "#6da9d2",
+      "#ffffff",
+      "#000000"
+    ]
+  },
+  {
+    "code": "BRA",
+    "name": "Brazil",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BRA.svg",
+    "bgColors": [
+      "#009746",
+      "#f7c210",
+      "#009746"
+    ]
+  },
+  {
+    "code": "VGB",
+    "name": "British Virgin Islands",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/VGB.svg",
+    "bgColors": [
+      "#012169",
+      "#ffffff",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "BRU",
+    "name": "Brunei",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BRU.svg",
+    "bgColors": [
+      "#f7e017",
+      "#ffffff",
+      "#cf1126"
+    ]
+  },
+  {
+    "code": "BUL",
+    "name": "Bulgaria",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BUL.svg",
+    "bgColors": [
+      "#ffffff",
+      "#00966e",
+      "#d62612"
+    ]
+  },
+  {
+    "code": "BFA",
+    "name": "Burkina Faso",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BFA.svg",
+    "bgColors": [
+      "#ef2b2d",
+      "#fcd116",
+      "#009e49"
+    ]
+  },
+  {
+    "code": "BDI",
+    "name": "Burundi",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/BDI.svg",
+    "bgColors": [
+      "#ce1126",
+      "#ffffff",
+      "#43b02a"
+    ]
+  },
+  {
+    "code": "CAM",
+    "name": "Cambodia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CAM.svg",
+    "bgColors": [
+      "#032ea1",
+      "#ffffff",
+      "#e00025"
+    ]
+  },
+  {
+    "code": "CMR",
+    "name": "Cameroon",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CMR.svg",
+    "bgColors": [
+      "#007a5e",
+      "#ce1126",
+      "#fcd116"
+    ]
+  },
+  {
+    "code": "CAN",
+    "name": "Canada",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CAN.svg",
+    "bgColors": [
+      "#e5231a",
+      "#f1836a",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "CPV",
+    "name": "Cape Verde",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CPV.svg",
+    "bgColors": [
+      "#253783",
+      "#cc151a",
+      "#253783"
+    ]
+  },
+  {
+    "code": "CAY",
+    "name": "Cayman Islands",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CAY.svg",
+    "bgColors": [
+      "#012169",
+      "#ffffff",
+      "#c8102e"
+    ]
+  },
+  {
+    "code": "CTA",
+    "name": "Central African Republic",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CTA.svg",
+    "bgColors": [
+      "#003082",
+      "#ffffff",
+      "#ffce00"
+    ]
+  },
+  {
+    "code": "CHA",
+    "name": "Chad",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CHA.svg",
+    "bgColors": [
+      "#002664",
+      "#fecb00",
+      "#c60c30"
+    ]
+  },
+  {
+    "code": "CHI",
+    "name": "Chile",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CHI.svg",
+    "bgColors": [
+      "#0032a0",
+      "#ffffff",
+      "#da291c"
+    ]
+  },
+  {
+    "code": "CHN",
+    "name": "China",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CHN.svg",
+    "bgColors": [
+      "#ee1c25",
+      "#ffff00",
+      "#ee1c25"
+    ]
+  },
+  {
+    "code": "TPE",
+    "name": "Chinese Taipei",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TPE.svg",
+    "bgColors": [
+      "#fe0000",
+      "#ffffff",
+      "#000095"
+    ]
+  },
+  {
+    "code": "COL",
+    "name": "Colombia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/COL.svg",
+    "bgColors": [
+      "#fed501",
+      "#30388d",
+      "#c41a1b"
+    ]
+  },
+  {
+    "code": "COM",
+    "name": "Comoros",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/COM.svg",
+    "bgColors": [
+      "#ffd100",
+      "#ffffff",
+      "#ef3340"
+    ]
+  },
+  {
+    "code": "CGO",
+    "name": "Congo",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CGO.svg",
+    "bgColors": [
+      "#4874b9",
+      "#f9d800",
+      "#e30713"
+    ]
+  },
+  {
+    "code": "COK",
+    "name": "Cook Islands",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/COK.svg",
+    "bgColors": [
+      "#012169",
+      "#ffffff",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "CRC",
+    "name": "Costa Rica",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CRC.svg",
+    "bgColors": [
+      "#001489",
+      "#ffffff",
+      "#da291c"
+    ]
+  },
+  {
+    "code": "CRO",
+    "name": "Croatia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CRO.svg",
+    "bgColors": [
+      "#ce342c",
+      "#ffffff",
+      "#30388d"
+    ]
+  },
+  {
+    "code": "CUB",
+    "name": "Cuba",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CUB.svg",
+    "bgColors": [
+      "#002a8f",
+      "#ffffff",
+      "#cb1515"
+    ]
+  },
+  {
+    "code": "CUW",
+    "name": "Curaçao",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CUW.svg",
+    "bgColors": [
+      "#263671",
+      "#7776a0",
+      "#fcea0e"
+    ]
+  },
+  {
+    "code": "CYP",
+    "name": "Cyprus",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CYP.svg",
+    "bgColors": [
+      "#d67900",
+      "#ffffff",
+      "#4d5b2d"
+    ]
+  },
+  {
+    "code": "CZE",
+    "name": "Czech Republic",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CZE.svg",
+    "bgColors": [
+      "#016297",
+      "#d33532",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "DEN",
+    "name": "Denmark",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/DEN.svg",
+    "bgColors": [
+      "#c8102e",
+      "#ffffff",
+      "#c8102e"
+    ]
+  },
+  {
+    "code": "DJI",
+    "name": "Djibouti",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/DJI.svg",
+    "bgColors": [
+      "#6ab2e7",
+      "#ffffff",
+      "#12ad2b"
+    ]
+  },
+  {
+    "code": "DMA",
+    "name": "Dominica",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/DMA.svg",
+    "bgColors": [
+      "#046a38",
+      "#ffcd00",
+      "#000000"
+    ]
+  },
+  {
+    "code": "DOM",
+    "name": "Dominican Republic",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/DOM.svg",
+    "bgColors": [
+      "#002d62",
+      "#ffffff",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "COD",
+    "name": "DR Congo",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/COD.svg",
+    "bgColors": [
+      "#007fff",
+      "#f7d618",
+      "#ce1021"
+    ]
+  },
+  {
+    "code": "ECU",
+    "name": "Ecuador",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ECU.svg",
+    "bgColors": [
+      "#fed501",
+      "#30388d",
+      "#cc1d22"
+    ]
+  },
+  {
+    "code": "EGY",
+    "name": "Egypt",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/EGY.svg",
+    "bgColors": [
+      "#cc151a",
+      "#ffffff",
+      "#000000"
+    ]
+  },
+  {
+    "code": "SLV",
+    "name": "El Salvador",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SLV.svg",
+    "bgColors": [
+      "#0047ab",
+      "#ffffff",
+      "#0047ab"
+    ]
+  },
+  {
+    "code": "ENG",
+    "name": "England",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ENG.svg",
+    "bgColors": [
+      "#ffffff",
+      "#cf313f",
+      "#fffeff"
+    ]
+  },
+  {
+    "code": "EQG",
+    "name": "Equatorial Guinea",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/EQG.svg",
+    "bgColors": [
+      "#3e9a00",
+      "#ffffff",
+      "#e32118"
+    ]
+  },
+  {
+    "code": "ERI",
+    "name": "Eritrea",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ERI.svg",
+    "bgColors": [
+      "#e4002b",
+      "#43b02a",
+      "#418fde"
+    ]
+  },
+  {
+    "code": "EST",
+    "name": "Estonia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/EST.svg",
+    "bgColors": [
+      "#0072ce",
+      "#000000",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "SWZ",
+    "name": "Eswatini",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SWZ.svg",
+    "bgColors": [
+      "#3e5eb9",
+      "#ffd900",
+      "#b10c0c"
+    ]
+  },
+  {
+    "code": "ETH",
+    "name": "Ethiopia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ETH.svg",
+    "bgColors": [
+      "#078930",
+      "#fcdd09",
+      "#da121a"
+    ]
+  },
+  {
+    "code": "FRO",
+    "name": "Faroe Islands",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/FRO.svg",
+    "bgColors": [
+      "#005eb8",
+      "#ffffff",
+      "#ef3340"
+    ]
+  },
+  {
+    "code": "FIJ",
+    "name": "Fiji",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/FIJ.svg",
+    "bgColors": [
+      "#7eaecf",
+      "#ffffff",
+      "#012169"
+    ]
+  },
+  {
+    "code": "FIN",
+    "name": "Finland",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/FIN.svg",
+    "bgColors": [
+      "#003580",
+      "#ffffff",
+      "#003580"
+    ]
+  },
+  {
+    "code": "FRA",
+    "name": "France",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/FRA.svg",
+    "bgColors": [
+      "#21398f",
+      "#ffffff",
+      "#e04543"
+    ]
+  },
+  {
+    "code": "GAB",
+    "name": "Gabon",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GAB.svg",
+    "bgColors": [
+      "#009e60",
+      "#fcd116",
+      "#3a75c4"
+    ]
+  },
+  {
+    "code": "GAM",
+    "name": "Gambia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GAM.svg",
+    "bgColors": [
+      "#ce1126",
+      "#ffffff",
+      "#0c1c8c"
+    ]
+  },
+  {
+    "code": "GEO",
+    "name": "Georgia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GEO.svg",
+    "bgColors": [
+      "#ff0000",
+      "#ffffff",
+      "#ff0000"
+    ]
+  },
+  {
+    "code": "GER",
+    "name": "Germany",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GER.svg",
+    "bgColors": [
+      "#000000",
+      "#d62f1d",
+      "#ffca00"
+    ]
+  },
+  {
+    "code": "GHA",
+    "name": "Ghana",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GHA.svg",
+    "bgColors": [
+      "#e62329",
+      "#ffdd00",
+      "#008d3f"
+    ]
+  },
+  {
+    "code": "GIB",
+    "name": "Gibraltar",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GIB.svg",
+    "bgColors": [
+      "#ffffff",
+      "#da000c",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "GRE",
+    "name": "Greece",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GRE.svg",
+    "bgColors": [
+      "#0d5eaf",
+      "#ffffff",
+      "#0d5eaf"
+    ]
+  },
+  {
+    "code": "GRN",
+    "name": "Grenada",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GRN.svg",
+    "bgColors": [
+      "#ce1126",
+      "#fcd116",
+      "#007a5e"
+    ]
+  },
+  {
+    "code": "GUM",
+    "name": "Guam",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GUM.svg",
+    "bgColors": [
+      "#00297b",
+      "#ffffff",
+      "#c62139"
+    ]
+  },
+  {
+    "code": "GUA",
+    "name": "Guatemala",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GUA.svg",
+    "bgColors": [
+      "#4997d0",
+      "#ffffff",
+      "#4997d0"
+    ]
+  },
+  {
+    "code": "GUI",
+    "name": "Guinea",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GUI.svg",
+    "bgColors": [
+      "#ce1126",
+      "#fcd116",
+      "#009460"
+    ]
+  },
+  {
+    "code": "GNB",
+    "name": "Guinea-Bissau",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GNB.svg",
+    "bgColors": [
+      "#ce1126",
+      "#fcd116",
+      "#009e49"
+    ]
+  },
+  {
+    "code": "GUY",
+    "name": "Guyana",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/GUY.svg",
+    "bgColors": [
+      "#2a936a",
+      "#ffc20e",
+      "#be1e2d"
+    ]
+  },
+  {
+    "code": "HAI",
+    "name": "Haiti",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/HAI.svg",
+    "bgColors": [
+      "#363289",
+      "#e06b64",
+      "#d31b33"
+    ]
+  },
+  {
+    "code": "HON",
+    "name": "Honduras",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/HON.svg",
+    "bgColors": [
+      "#0d3b99",
+      "#ffffff",
+      "#0d3b99"
+    ]
+  },
+  {
+    "code": "HKG",
+    "name": "Hong Kong",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/HKG.svg",
+    "bgColors": [
+      "#ee1c25",
+      "#ffffff",
+      "#ee1c25"
+    ]
+  },
+  {
+    "code": "HUN",
+    "name": "Hungary",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/HUN.svg",
+    "bgColors": [
+      "#ce2939",
+      "#ffffff",
+      "#477050"
+    ]
+  },
+  {
+    "code": "ISL",
+    "name": "Iceland",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ISL.svg",
+    "bgColors": [
+      "#02529c",
+      "#ffffff",
+      "#02529c"
+    ]
+  },
+  {
+    "code": "IND",
+    "name": "India",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/IND.svg",
+    "bgColors": [
+      "#ff9933",
+      "#ffffff",
+      "#138808"
+    ]
+  },
+  {
+    "code": "IDN",
+    "name": "Indonesia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/IDN.svg",
+    "bgColors": [
+      "#ff0000",
+      "#ffffff",
+      "#ff0000"
+    ]
+  },
+  {
+    "code": "IRN",
+    "name": "Iran",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/IRN.svg",
+    "bgColors": [
+      "#21a446",
+      "#ffffff",
+      "#da1a15"
+    ]
+  },
+  {
+    "code": "IRQ",
+    "name": "Iraq",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/IRQ.svg",
+    "bgColors": [
+      "#d01624",
+      "#ffffff",
+      "#000000"
+    ]
+  },
+  {
+    "code": "ISR",
+    "name": "Israel",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ISR.svg",
+    "bgColors": [
+      "#0038b8",
+      "#ffffff",
+      "#0038b8"
+    ]
+  },
+  {
+    "code": "ITA",
+    "name": "Italy",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ITA.svg",
+    "bgColors": [
+      "#009246",
+      "#ffffff",
+      "#ce2b37"
+    ]
+  },
+  {
+    "code": "CIV",
+    "name": "Ivory Coast",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/CIV.svg",
+    "bgColors": [
+      "#ef8331",
+      "#ffffff",
+      "#009551"
+    ]
+  },
+  {
+    "code": "JAM",
+    "name": "Jamaica",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/JAM.svg",
+    "bgColors": [
+      "#007749",
+      "#fed100",
+      "#000000"
+    ]
+  },
+  {
+    "code": "JPN",
+    "name": "Japan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/JPN.svg",
+    "bgColors": [
+      "#ffffff",
+      "#b61922",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "JOR",
+    "name": "Jordan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/JOR.svg",
+    "bgColors": [
+      "#000000",
+      "#ffffff",
+      "#378c48"
+    ]
+  },
+  {
+    "code": "KAZ",
+    "name": "Kazakhstan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/KAZ.svg",
+    "bgColors": [
+      "#00abc2",
+      "#ffec2d",
+      "#00abc2"
+    ]
+  },
+  {
+    "code": "KEN",
+    "name": "Kenya",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/KEN.svg",
+    "bgColors": [
+      "#000000",
+      "#bb0000",
+      "#006600"
+    ]
+  },
+  {
+    "code": "KOS",
+    "name": "Kosovo",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/KOS.svg",
+    "bgColors": [
+      "#244aa5",
+      "#d0a650",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "KUW",
+    "name": "Kuwait",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/KUW.svg",
+    "bgColors": [
+      "#007a3d",
+      "#ffffff",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "KGZ",
+    "name": "Kyrgyzstan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/KGZ.svg",
+    "bgColors": [
+      "#ff0000",
+      "#ffff00",
+      "#ff0000"
+    ]
+  },
+  {
+    "code": "LAO",
+    "name": "Laos",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LAO.svg",
+    "bgColors": [
+      "#ce1126",
+      "#ffffff",
+      "#002868"
+    ]
+  },
+  {
+    "code": "LVA",
+    "name": "Latvia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LVA.svg",
+    "bgColors": [
+      "#9d2235",
+      "#ffffff",
+      "#9d2235"
+    ]
+  },
+  {
+    "code": "LBN",
+    "name": "Lebanon",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LBN.svg",
+    "bgColors": [
+      "#d31624",
+      "#ffffff",
+      "#008c3e"
+    ]
+  },
+  {
+    "code": "LES",
+    "name": "Lesotho",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LES.svg",
+    "bgColors": [
+      "#001489",
+      "#ffffff",
+      "#009a44"
+    ]
+  },
+  {
+    "code": "LBR",
+    "name": "Liberia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LBR.svg",
+    "bgColors": [
+      "#cc1133",
+      "#ffffff",
+      "#003377"
+    ]
+  },
+  {
+    "code": "LBY",
+    "name": "Libya",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LBY.svg",
+    "bgColors": [
+      "#e70013",
+      "#000000",
+      "#239e46"
+    ]
+  },
+  {
+    "code": "LIE",
+    "name": "Liechtenstein",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LIE.svg",
+    "bgColors": [
+      "#002b7f",
+      "#ffd83d",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "LTU",
+    "name": "Lithuania",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LTU.svg",
+    "bgColors": [
+      "#fdb913",
+      "#006a44",
+      "#c1272d"
+    ]
+  },
+  {
+    "code": "LUX",
+    "name": "Luxembourg",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LUX.svg",
+    "bgColors": [
+      "#ef3340",
+      "#ffffff",
+      "#00a3e0"
+    ]
+  },
+  {
+    "code": "MAC",
+    "name": "Macau",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MAC.svg",
+    "bgColors": [
+      "#0f7562",
+      "#ffffff",
+      "#ffde23"
+    ]
+  },
+  {
+    "code": "MAD",
+    "name": "Madagascar",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MAD.svg",
+    "bgColors": [
+      "#ffffff",
+      "#f9423a",
+      "#00843d"
+    ]
+  },
+  {
+    "code": "MWI",
+    "name": "Malawi",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MWI.svg",
+    "bgColors": [
+      "#000000",
+      "#ce1126",
+      "#339e35"
+    ]
+  },
+  {
+    "code": "MAS",
+    "name": "Malaysia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MAS.svg",
+    "bgColors": [
+      "#cc0000",
+      "#ffffff",
+      "#000066"
+    ]
+  },
+  {
+    "code": "MDV",
+    "name": "Maldives",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MDV.svg",
+    "bgColors": [
+      "#d21034",
+      "#ffffff",
+      "#007e3a"
+    ]
+  },
+  {
+    "code": "MLI",
+    "name": "Mali",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MLI.svg",
+    "bgColors": [
+      "#14b53a",
+      "#fcd116",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "MLT",
+    "name": "Malta",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MLT.svg",
+    "bgColors": [
+      "#ffffff",
+      "#cf142b",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "MTN",
+    "name": "Mauritania",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MTN.svg",
+    "bgColors": [
+      "#00a95c",
+      "#ffd700",
+      "#d01c1f"
+    ]
+  },
+  {
+    "code": "MRI",
+    "name": "Mauritius",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MRI.svg",
+    "bgColors": [
+      "#ea2839",
+      "#001a70",
+      "#00a04d"
+    ]
+  },
+  {
+    "code": "MEX",
+    "name": "Mexico",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MEX.svg",
+    "bgColors": [
+      "#006859",
+      "#ffffff",
+      "#cd1d28"
+    ]
+  },
+  {
+    "code": "MDA",
+    "name": "Moldova",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MDA.svg",
+    "bgColors": [
+      "#0046ae",
+      "#ffd200",
+      "#cc092f"
+    ]
+  },
+  {
+    "code": "MNG",
+    "name": "Mongolia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MNG.svg",
+    "bgColors": [
+      "#c4272f",
+      "#ffd300",
+      "#0066b2"
+    ]
+  },
+  {
+    "code": "MNE",
+    "name": "Montenegro",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MNE.svg",
+    "bgColors": [
+      "#c40308",
+      "#d4af37",
+      "#c40308"
+    ]
+  },
+  {
+    "code": "MSR",
+    "name": "Montserrat",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MSR.svg",
+    "bgColors": [
+      "#012169",
+      "#ffffff",
+      "#00a2dd"
+    ]
+  },
+  {
+    "code": "MAR",
+    "name": "Morocco",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MAR.svg",
+    "bgColors": [
+      "#e30713",
+      "#008d3f",
+      "#e30713"
+    ]
+  },
+  {
+    "code": "MOZ",
+    "name": "Mozambique",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MOZ.svg",
+    "bgColors": [
+      "#009b48",
+      "#000000",
+      "#fce100"
+    ]
+  },
+  {
+    "code": "MYA",
+    "name": "Myanmar",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MYA.svg",
+    "bgColors": [
+      "#fecb00",
+      "#34b233",
+      "#ea2839"
+    ]
+  },
+  {
+    "code": "NAM",
+    "name": "Namibia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NAM.svg",
+    "bgColors": [
+      "#003580",
+      "#ffce00",
+      "#009543"
+    ]
+  },
+  {
+    "code": "NEP",
+    "name": "Nepal",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NEP.svg",
+    "bgColors": [
+      "#dc143c",
+      "#ffffff",
+      "#003893"
+    ]
+  },
+  {
+    "code": "NED",
+    "name": "Netherlands",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NED.svg",
+    "bgColors": [
+      "#b53240",
+      "#ffffff",
+      "#1165a4"
+    ]
+  },
+  {
+    "code": "NCL",
+    "name": "New Caledonia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NCL.svg",
+    "bgColors": [
+      "#0035ad",
+      "#ed4135",
+      "#009543"
+    ]
+  },
+  {
+    "code": "NZL",
+    "name": "New Zealand",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NZL.svg",
+    "bgColors": [
+      "#312a78",
+      "#685a98",
+      "#e7333f"
+    ]
+  },
+  {
+    "code": "NCA",
+    "name": "Nicaragua",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NCA.svg",
+    "bgColors": [
+      "#0067c6",
+      "#ffffff",
+      "#0067c6"
+    ]
+  },
+  {
+    "code": "NIG",
+    "name": "Niger",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NIG.svg",
+    "bgColors": [
+      "#e05206",
+      "#ffffff",
+      "#0db02b"
+    ]
+  },
+  {
+    "code": "NGA",
+    "name": "Nigeria",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NGA.svg",
+    "bgColors": [
+      "#008751",
+      "#ffffff",
+      "#008751"
+    ]
+  },
+  {
+    "code": "PRK",
+    "name": "North Korea",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PRK.svg",
+    "bgColors": [
+      "#024fa2",
+      "#ffffff",
+      "#ed1c27"
+    ]
+  },
+  {
+    "code": "MKD",
+    "name": "North Macedonia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/MKD.svg",
+    "bgColors": [
+      "#d82126",
+      "#fcd116",
+      "#d82126"
+    ]
+  },
+  {
+    "code": "NIR",
+    "name": "Northern Ireland",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NIR.svg",
+    "bgColors": [
+      "#ffffff",
+      "#cc0000",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "NOR",
+    "name": "Norway",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/NOR.svg",
+    "bgColors": [
+      "#de2632",
+      "#fffffe",
+      "#174a7f"
+    ]
+  },
+  {
+    "code": "OMA",
+    "name": "Oman",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/OMA.svg",
+    "bgColors": [
+      "#dc241f",
+      "#ffffff",
+      "#008000"
+    ]
+  },
+  {
+    "code": "PAK",
+    "name": "Pakistan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PAK.svg",
+    "bgColors": [
+      "#01411c",
+      "#ffffff",
+      "#01411c"
+    ]
+  },
+  {
+    "code": "PLE",
+    "name": "Palestine",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PLE.svg",
+    "bgColors": [
+      "#000000",
+      "#ffffff",
+      "#009639"
+    ]
+  },
+  {
+    "code": "PAN",
+    "name": "Panama",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PAN.svg",
+    "bgColors": [
+      "#ffffff",
+      "#d21035",
+      "#035293"
+    ]
+  },
+  {
+    "code": "PNG",
+    "name": "Papua New Guinea",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PNG.svg",
+    "bgColors": [
+      "#000000",
+      "#ffcd00",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "PAR",
+    "name": "Paraguay",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PAR.svg",
+    "bgColors": [
+      "#e30713",
+      "#ffffff",
+      "#28338b"
+    ]
+  },
+  {
+    "code": "PER",
+    "name": "Peru",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PER.svg",
+    "bgColors": [
+      "#d91023",
+      "#ffffff",
+      "#d91023"
+    ]
+  },
+  {
+    "code": "PHI",
+    "name": "Philippines",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PHI.svg",
+    "bgColors": [
+      "#0038a8",
+      "#ffffff",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "POL",
+    "name": "Poland",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/POL.svg",
+    "bgColors": [
+      "#ffffff",
+      "#dc143c",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "POR",
+    "name": "Portugal",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/POR.svg",
+    "bgColors": [
+      "#1b692f",
+      "#678b5b",
+      "#e30713"
+    ]
+  },
+  {
+    "code": "PUR",
+    "name": "Puerto Rico",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/PUR.svg",
+    "bgColors": [
+      "#ed0000",
+      "#ffffff",
+      "#0050f0"
+    ]
+  },
+  {
+    "code": "QAT",
+    "name": "Qatar",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/QAT.svg",
+    "bgColors": [
+      "#ffffff",
+      "#bd617a",
+      "#75273f"
+    ]
+  },
+  {
+    "code": "IRL",
+    "name": "Republic of Ireland",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/IRL.svg",
+    "bgColors": [
+      "#169b62",
+      "#ffffff",
+      "#ff883e"
+    ]
+  },
+  {
+    "code": "ROU",
+    "name": "Romania",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ROU.svg",
+    "bgColors": [
+      "#002b7f",
+      "#fcd116",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "RUS",
+    "name": "Russia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/RUS.svg",
+    "bgColors": [
+      "#ffffff",
+      "#0039a6",
+      "#d52b1e"
+    ]
+  },
+  {
+    "code": "RWA",
+    "name": "Rwanda",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/RWA.svg",
+    "bgColors": [
+      "#00a3e0",
+      "#fad201",
+      "#20603d"
+    ]
+  },
+  {
+    "code": "SKN",
+    "name": "Saint Kitts and Nevis",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SKN.svg",
+    "bgColors": [
+      "#009739",
+      "#fcd116",
+      "#000000"
+    ]
+  },
+  {
+    "code": "LCA",
+    "name": "Saint Lucia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/LCA.svg",
+    "bgColors": [
+      "#65cfd9",
+      "#ffffff",
+      "#fcd116"
+    ]
+  },
+  {
+    "code": "VIN",
+    "name": "Saint Vincent and the Grenadines",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/VIN.svg",
+    "bgColors": [
+      "#002868",
+      "#fcd116",
+      "#009e49"
+    ]
+  },
+  {
+    "code": "SAM",
+    "name": "Samoa",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SAM.svg",
+    "bgColors": [
+      "#bd0026",
+      "#ffffff",
+      "#002b7f"
+    ]
+  },
+  {
+    "code": "SMR",
+    "name": "San Marino",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SMR.svg",
+    "bgColors": [
+      "#5eb6e4",
+      "#ffffff",
+      "#5eb6e4"
+    ]
+  },
+  {
+    "code": "STP",
+    "name": "São Tomé and Príncipe",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/STP.svg",
+    "bgColors": [
+      "#12ad2b",
+      "#ffce00",
+      "#d21034"
+    ]
+  },
+  {
+    "code": "KSA",
+    "name": "Saudi Arabia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/KSA.svg",
+    "bgColors": [
+      "#008d3f",
+      "#ffffff",
+      "#008d3f"
+    ]
+  },
+  {
+    "code": "SCO",
+    "name": "Scotland",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SCO.svg",
+    "bgColors": [
+      "#0083c9",
+      "#ffffff",
+      "#0083c9"
+    ]
+  },
+  {
+    "code": "SEN",
+    "name": "Senegal",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SEN.svg",
+    "bgColors": [
+      "#00893b",
+      "#feef30",
+      "#e30713"
+    ]
+  },
+  {
+    "code": "SRB",
+    "name": "Serbia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SRB.svg",
+    "bgColors": [
+      "#c6363c",
+      "#0c4076",
+      "#ffffff"
+    ]
+  },
+  {
+    "code": "SEY",
+    "name": "Seychelles",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SEY.svg",
+    "bgColors": [
+      "#003d88",
+      "#fcd955",
+      "#d62828"
+    ]
+  },
+  {
+    "code": "SLE",
+    "name": "Sierra Leone",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SLE.svg",
+    "bgColors": [
+      "#1eb53a",
+      "#ffffff",
+      "#0072c6"
+    ]
+  },
+  {
+    "code": "SGP",
+    "name": "Singapore",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SGP.svg",
+    "bgColors": [
+      "#ee2536",
+      "#ffffff",
+      "#ee2536"
+    ]
+  },
+  {
+    "code": "SVK",
+    "name": "Slovakia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SVK.svg",
+    "bgColors": [
+      "#ffffff",
+      "#0b4ea2",
+      "#ee1c25"
+    ]
+  },
+  {
+    "code": "SVN",
+    "name": "Slovenia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SVN.svg",
+    "bgColors": [
+      "#ffffff",
+      "#0000ff",
+      "#ff0000"
+    ]
+  },
+  {
+    "code": "SOL",
+    "name": "Solomon Islands",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SOL.svg",
+    "bgColors": [
+      "#0051ba",
+      "#fcd116",
+      "#215b33"
+    ]
+  },
+  {
+    "code": "SOM",
+    "name": "Somalia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SOM.svg",
+    "bgColors": [
+      "#4189dd",
+      "#ffffff",
+      "#4189dd"
+    ]
+  },
+  {
+    "code": "RSA",
+    "name": "South Africa",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/RSA.svg",
+    "bgColors": [
+      "#e33b26",
+      "#117e5e",
+      "#35277c"
+    ]
+  },
+  {
+    "code": "KOR",
+    "name": "South Korea",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/KOR.svg",
+    "bgColors": [
+      "#ffffff",
+      "#d41218",
+      "#13387f"
+    ]
+  },
+  {
+    "code": "SSD",
+    "name": "South Sudan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SSD.svg",
+    "bgColors": [
+      "#000000",
+      "#cf142b",
+      "#078930"
+    ]
+  },
+  {
+    "code": "ESP",
+    "name": "Spain",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ESP.svg",
+    "bgColors": [
+      "#d5291f",
+      "#e37053",
+      "#ffdf12"
+    ]
+  },
+  {
+    "code": "SRI",
+    "name": "Sri Lanka",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SRI.svg",
+    "bgColors": [
+      "#ffbe29",
+      "#7b3f00",
+      "#00534e"
+    ]
+  },
+  {
+    "code": "SDN",
+    "name": "Sudan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SDN.svg",
+    "bgColors": [
+      "#d21034",
+      "#ffffff",
+      "#007a3d"
+    ]
+  },
+  {
+    "code": "SUR",
+    "name": "Suriname",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SUR.svg",
+    "bgColors": [
+      "#377e3f",
+      "#ffffff",
+      "#b40a2d"
+    ]
+  },
+  {
+    "code": "SWE",
+    "name": "Sweden",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SWE.svg",
+    "bgColors": [
+      "#0076b3",
+      "#ffd213",
+      "#0076b3"
+    ]
+  },
+  {
+    "code": "SUI",
+    "name": "Switzerland",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SUI.svg",
+    "bgColors": [
+      "#e00712",
+      "#ffffff",
+      "#e00712"
+    ]
+  },
+  {
+    "code": "SYR",
+    "name": "Syria",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/SYR.svg",
+    "bgColors": [
+      "#1e9b4b",
+      "#ffffff",
+      "#000000"
+    ]
+  },
+  {
+    "code": "TAH",
+    "name": "Tahiti",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TAH.svg",
+    "bgColors": [
+      "#ce1126",
+      "#ffffff",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "TJK",
+    "name": "Tajikistan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TJK.svg",
+    "bgColors": [
+      "#cc0000",
+      "#ffffff",
+      "#006600"
+    ]
+  },
+  {
+    "code": "TAN",
+    "name": "Tanzania",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TAN.svg",
+    "bgColors": [
+      "#1eb53a",
+      "#fcd116",
+      "#00a3dd"
+    ]
+  },
+  {
+    "code": "THA",
+    "name": "Thailand",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/THA.svg",
+    "bgColors": [
+      "#ed1c24",
+      "#ffffff",
+      "#241d4f"
+    ]
+  },
+  {
+    "code": "TLS",
+    "name": "Timor-Leste",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TLS.svg",
+    "bgColors": [
+      "#dc241f",
+      "#ffc726",
+      "#000000"
+    ]
+  },
+  {
+    "code": "TOG",
+    "name": "Togo",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TOG.svg",
+    "bgColors": [
+      "#006a4e",
+      "#ffce00",
+      "#d21034"
+    ]
+  },
+  {
+    "code": "TGA",
+    "name": "Tonga",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TGA.svg",
+    "bgColors": [
+      "#c10000",
+      "#ffffff",
+      "#c10000"
+    ]
+  },
+  {
+    "code": "TRI",
+    "name": "Trinidad and Tobago",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TRI.svg",
+    "bgColors": [
+      "#cf142b",
+      "#ffffff",
+      "#000000"
+    ]
+  },
+  {
+    "code": "TUN",
+    "name": "Tunisia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TUN.svg",
+    "bgColors": [
+      "#e30713",
+      "#ffffff",
+      "#e30713"
+    ]
+  },
+  {
+    "code": "TUR",
+    "name": "Turkey",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TUR.svg",
+    "bgColors": [
+      "#d41316",
+      "#ffffff",
+      "#d41316"
+    ]
+  },
+  {
+    "code": "TKM",
+    "name": "Turkmenistan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TKM.svg",
+    "bgColors": [
+      "#00853e",
+      "#ffffff",
+      "#ce1126"
+    ]
+  },
+  {
+    "code": "TCA",
+    "name": "Turks and Caicos Islands",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/TCA.svg",
+    "bgColors": [
+      "#012169",
+      "#ffffff",
+      "#c8102e"
+    ]
+  },
+  {
+    "code": "VIR",
+    "name": "U.S. Virgin Islands",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/VIR.svg",
+    "bgColors": [
+      "#ffffff",
+      "#ffd700",
+      "#0a3161"
+    ]
+  },
+  {
+    "code": "UGA",
+    "name": "Uganda",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/UGA.svg",
+    "bgColors": [
+      "#000000",
+      "#fcdc04",
+      "#d90000"
+    ]
+  },
+  {
+    "code": "UKR",
+    "name": "Ukraine",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/UKR.svg",
+    "bgColors": [
+      "#005bbb",
+      "#ffd500",
+      "#005bbb"
+    ]
+  },
+  {
+    "code": "UAE",
+    "name": "United Arab Emirates",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/UAE.svg",
+    "bgColors": [
+      "#ef3340",
+      "#ffffff",
+      "#000000"
+    ]
+  },
+  {
+    "code": "USA",
+    "name": "United States",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/USA.svg",
+    "bgColors": [
+      "#174195",
+      "#e4032f",
+      "#1a2867"
+    ]
+  },
+  {
+    "code": "URU",
+    "name": "Uruguay",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/URU.svg",
+    "bgColors": [
+      "#ffffff",
+      "#7979b7",
+      "#354092"
+    ]
+  },
+  {
+    "code": "UZB",
+    "name": "Uzbekistan",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/UZB.svg",
+    "bgColors": [
+      "#008fb7",
+      "#ffffff",
+      "#37ab4a"
+    ]
+  },
+  {
+    "code": "VAN",
+    "name": "Vanuatu",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/VAN.svg",
+    "bgColors": [
+      "#ce0000",
+      "#fdce12",
+      "#000000"
+    ]
+  },
+  {
+    "code": "VEN",
+    "name": "Venezuela",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/VEN.svg",
+    "bgColors": [
+      "#ffd700",
+      "#0033a0",
+      "#cf142b"
+    ]
+  },
+  {
+    "code": "VIE",
+    "name": "Vietnam",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/VIE.svg",
+    "bgColors": [
+      "#da251d",
+      "#ffff00",
+      "#da251d"
+    ]
+  },
+  {
+    "code": "WAL",
+    "name": "Wales",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/WAL.svg",
+    "bgColors": [
+      "#ffffff",
+      "#cf142b",
+      "#00b140"
+    ]
+  },
+  {
+    "code": "YEM",
+    "name": "Yemen",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/YEM.svg",
+    "bgColors": [
+      "#cf0921",
+      "#ffffff",
+      "#000000"
+    ]
+  },
+  {
+    "code": "ZAM",
+    "name": "Zambia",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ZAM.svg",
+    "bgColors": [
+      "#198a00",
+      "#ef7d00",
+      "#cf0a2c"
+    ]
+  },
+  {
+    "code": "ZIM",
+    "name": "Zimbabwe",
+    "flag": "https://my-wc26-sticker.pages.dev/flags/ZIM.svg",
+    "bgColors": [
+      "#078930",
+      "#fcd116",
+      "#d40000"
+    ]
+  }
+]

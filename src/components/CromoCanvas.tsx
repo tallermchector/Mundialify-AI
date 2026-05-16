@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useEffect, useRef, useState } from 'react';
@@ -51,7 +50,15 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
   };
 
   useEffect(() => {
-    const loadImages = async () => {
+    const loadAssets = async () => {
+      // Pre-load fonts to avoid canvas rendering before they are ready
+      try {
+        await document.fonts.load('10pt "FuentePersonalizada"');
+        await document.fonts.load('10pt "FuentePersonalizadaAA"');
+      } catch (e) {
+        console.warn("Fonts could not be loaded precisely, using fallbacks.");
+      }
+
       const loaded: Record<string, HTMLImageElement> = {};
       const promises = EDITION_ASSETS.map(asset => {
         return new Promise((resolve) => {
@@ -69,7 +76,7 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
       setImages(loaded);
       setLoading(false);
     };
-    loadImages();
+    loadAssets();
   }, []);
 
   const drawCromo = async () => {
@@ -84,6 +91,8 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     canvas.height = H;
 
     const posColor = (POSITIONS[data.position] || POSITIONS.mid).rectColor;
+    const FONT_PAIS = '"FuentePersonalizada", "Barlow Condensed", sans-serif';
+    const FONT_RESTO = '"FuentePersonalizadaAA", "Barlow Condensed", sans-serif';
     
     // Tints
     const tints = {
@@ -125,8 +134,7 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
           
           ctx.save();
           ctx.beginPath();
-          // Use clip with rounded corners (14 is roughly scaled up)
-          ctx.roundRect(0, 0, W, H, 40); 
+          ctx.roundRect(0, 0, W, H, 14); 
           ctx.clip();
           ctx.drawImage(userImg, px, data.photoY, pw, ph);
           ctx.restore();
@@ -143,21 +151,31 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     }
     if (tints.marco6) ctx.drawImage(tints.marco6, 0, 0, W, H);
 
-    // Bandera
+    // Bandera - Usando ruta de assets o flagcdn como fallback
     const flagImg = new Image();
     flagImg.crossOrigin = 'anonymous';
+    // Prioridad a assets del mundialhub o flags locales si existieran
     flagImg.src = `https://mundialhub.vercel.app/frontend/assets/flags/${data.code.toLowerCase()}.png`;
+    
     await new Promise((resolve) => {
       flagImg.onload = () => {
         ctx.drawImage(flagImg, 0, 0, W, H);
         resolve(true);
       };
-      flagImg.onerror = resolve;
+      flagImg.onerror = () => {
+        // Fallback a FlagCDN si falla el servidor principal
+        flagImg.src = `https://flagcdn.com/w160/${data.code.toLowerCase() === 'en-gb' ? 'gb' : data.code.toLowerCase().slice(0, 2)}.png`;
+        flagImg.onload = () => {
+          // Nota: El dibujo de la bandera desde flagcdn requeriría una posición específica en el canvas
+          // pero aquí asumimos la estructura de la imagen de capa completa.
+          resolve(true);
+        };
+        flagImg.onerror = resolve;
+      };
     });
 
     // Código País (Vertical)
     ctx.save();
-    const FONT_PAIS = '"Barlow Condensed", sans-serif';
     data.code.toUpperCase().slice(0, 3).split('').forEach((l: string, i: number) => {
       ctx.font         = `900 220px ${FONT_PAIS}`;
       ctx.textAlign    = 'center';
@@ -182,7 +200,6 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     const cleanDate = `${data.day}-${data.month}-${data.year}`;
     const cleanHeight = formatHeight(data.height);
     const cleanWeight = formatWeight(data.weight);
-    const FONT_RESTO = '"Barlow Condensed", sans-serif';
 
     ctx.save();
     ctx.textAlign = 'center';

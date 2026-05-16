@@ -3,6 +3,30 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'FuentePersonalizada';
+    src: url('/fuente.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'FuentePersonalizadaAA';
+    src: url('/fuente2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'FuentePersonalizadaStat';
+    src: url('/fuente3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   :root {
     --background: 220 50% 8%;
     --foreground: 0 0% 100%;
