@@ -6,7 +6,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Upload, Share2, Download, RefreshCcw, Sparkles, Info, CheckCircle2, Trophy } from 'lucide-react';
+import { Textarea } from '@/components/ui/textarea';
+import { Upload, Share2, Copy, RefreshCcw, Sparkles, Info, CheckCircle2, Trophy, Terminal } from 'lucide-react';
 import { normalizeName, resizeImage } from '@/lib/image-utils';
 import { transformPhotoWithKit } from '@/ai/flows/ai-kit-transformation.ts';
 import { useToast } from '@/hooks/use-toast';
@@ -38,7 +39,7 @@ export const MundialifyApp: React.FC = () => {
     club: 'Inter Miami',
   });
   const [photo, setPhoto] = useState<string | null>(null);
-  const [transformedPhoto, setTransformedPhoto] = useState<string | null>(null);
+  const [generatedPrompt, setGeneratedPrompt] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -79,39 +80,30 @@ export const MundialifyApp: React.FC = () => {
         ...formData,
         photoDataUri: photo 
       });
-      setTransformedPhoto(result.transformedPhotoDataUri);
+      setGeneratedPrompt(result.generatedPrompt);
       setStep(4);
     } catch (err) {
       toast({
         variant: 'destructive',
-        title: 'Error de IA',
-        description: 'Hubo un problema generando tu cromo multinacional.'
+        title: 'Error de Proceso',
+        description: 'Hubo un problema generando el prompt.'
       });
     } finally {
       setIsProcessing(false);
     }
   };
 
-  const shareCromo = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: 'Mi Cromo Mundialify 2026',
-          text: `¡Mira mi figurita oficial de ${formData.team} hecha con IA!`,
-          url: window.location.href,
-        });
-      } catch (err) {
-        console.error('Error sharing:', err);
-      }
-    } else {
-       toast({ title: 'Compartir', description: 'Enlace copiado.' });
+  const copyToClipboard = () => {
+    if (generatedPrompt) {
+      navigator.clipboard.writeText(generatedPrompt);
+      toast({ title: 'Copiado', description: 'Prompt copiado al portapapeles.' });
     }
   };
 
   const reset = () => {
     setStep(1);
     setPhoto(null);
-    setTransformedPhoto(null);
+    setGeneratedPrompt(null);
     setFormData({ 
       name: '', 
       team: 'ARGENTINA', 
@@ -124,11 +116,11 @@ export const MundialifyApp: React.FC = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8 lg:py-16">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <div className="max-w-6xl mx-auto px-4 py-8 lg:py-16">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        {/* Left Side: Preview */}
-        <div className="flex justify-center order-2 lg:order-1 sticky top-8">
+        {/* Left Side: Preview (Cromo) */}
+        <div className="lg:col-span-5 flex justify-center sticky top-8">
           <div className="relative group w-full flex justify-center">
              <div className="absolute -inset-4 bg-panini-red/10 blur-3xl rounded-full opacity-30 animate-pulse" />
              <CromoSticker
@@ -137,22 +129,22 @@ export const MundialifyApp: React.FC = () => {
                height={formData.height}
                weight={formData.weight}
                team={formData.team}
-               imageUrl={transformedPhoto || photo || ''}
+               imageUrl={photo || ''}
                isProcessing={isProcessing}
                className="animate-in fade-in zoom-in duration-500"
-               isTransformed={!!transformedPhoto}
+               isTransformed={false}
              />
           </div>
         </div>
 
-        {/* Right Side: Wizard */}
-        <div className="order-1 lg:order-2 space-y-6">
+        {/* Right Side: Wizard & Output */}
+        <div className="lg:col-span-7 space-y-6">
           <div className="space-y-2">
             <h1 className="text-4xl lg:text-5xl font-headline font-black italic text-white tracking-tighter uppercase leading-tight">
-              WORLD CUP <span className="text-panini-yellow">2026</span>
+              PROMPT <span className="text-panini-yellow">CONSTRUCTOR</span>
             </h1>
             <p className="text-muted-foreground text-md uppercase tracking-widest font-bold">
-              AI TRADING CARD GENERATOR
+              INGENIERÍA DE PROMPTS MULTIMODALES
             </p>
           </div>
 
@@ -230,11 +222,11 @@ export const MundialifyApp: React.FC = () => {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="height">Altura (m)</Label>
-                    <Input id="height" name="height" type="number" step="0.01" value={formData.height} onChange={handleInputChange} className="bg-background/50" />
+                    <Input id="height" name="height" step="0.01" value={formData.height} onChange={handleInputChange} className="bg-background/50" />
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="weight">Peso (kg)</Label>
-                    <Input id="weight" name="weight" type="number" value={formData.weight} onChange={handleInputChange} className="bg-background/50" />
+                    <Input id="weight" name="weight" value={formData.weight} onChange={handleInputChange} className="bg-background/50" />
                   </div>
                 </div>
                 <div className="flex gap-2">
@@ -265,7 +257,7 @@ export const MundialifyApp: React.FC = () => {
                       <img src={photo} alt="Preview" className="absolute inset-0 w-full h-full object-cover opacity-40" />
                       <div className="z-10 flex flex-col items-center">
                         <CheckCircle2 className="w-12 h-12 text-green-500 mb-2" />
-                        <p className="font-bold text-white uppercase tracking-tighter">Imagen Lista</p>
+                        <p className="font-bold text-white uppercase tracking-tighter">Imagen Cargada</p>
                       </div>
                     </>
                   ) : (
@@ -273,7 +265,7 @@ export const MundialifyApp: React.FC = () => {
                       <div className="bg-white/10 p-4 rounded-full mb-3 group-hover:scale-110 transition-transform">
                         <Upload className="w-8 h-8 text-white" />
                       </div>
-                      <p className="font-bold text-white/60">Haz click para subir</p>
+                      <p className="font-bold text-white/60">Sube tu foto para el análisis</p>
                     </>
                   )}
                   <input type="file" ref={fileInputRef} className="hidden" accept="image/*" onChange={handlePhotoUpload} />
@@ -287,27 +279,35 @@ export const MundialifyApp: React.FC = () => {
                     className="flex-[2] bg-panini-red hover:bg-panini-red/90 text-white font-headline font-bold uppercase py-6 group"
                   >
                     <Sparkles className="w-5 h-5 mr-2" />
-                    Generar Cromo {formData.team}
+                    Construir Prompt Final
                   </Button>
                 </div>
               </div>
             )}
 
-            {step === 4 && (
-              <div className="space-y-4 animate-in zoom-in duration-300 text-center">
-                <h3 className="font-headline font-black text-2xl uppercase italic text-panini-yellow tracking-tighter">¡Cromo Generado!</h3>
-                <p className="text-sm text-muted-foreground uppercase">Edición Coleccionista Mundial 2026</p>
-                
-                <div className="grid grid-cols-2 gap-3 pt-4">
-                  <Button onClick={shareCromo} className="bg-panini-red text-white font-headline font-bold uppercase py-6">
-                    <Share2 className="w-4 h-4 mr-2" /> Compartir
-                  </Button>
-                  <Button variant="outline" className="border-white/10 hover:bg-white/5 font-headline font-bold uppercase py-6">
-                    <Download className="w-4 h-4 mr-2" /> Descargar
+            {step === 4 && generatedPrompt && (
+              <div className="space-y-4 animate-in zoom-in duration-300">
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <div className="flex items-center gap-2">
+                    <Terminal className="w-5 h-5 text-panini-yellow" />
+                    <h3 className="font-headline font-black text-xl uppercase italic tracking-tighter">Prompt Generado</h3>
+                  </div>
+                  <Button variant="outline" size="sm" onClick={copyToClipboard} className="h-8 border-white/10">
+                    <Copy className="w-3 h-3 mr-2" /> Copiar
                   </Button>
                 </div>
-                <Button variant="ghost" onClick={reset} className="w-full text-white/40 hover:text-white uppercase text-xs font-bold tracking-widest">
-                  <RefreshCcw className="w-3 h-3 mr-2" /> Crear un nuevo cromo
+                
+                <div className="relative group">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-panini-red to-panini-yellow rounded-lg blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+                  <Textarea 
+                    readOnly 
+                    value={generatedPrompt} 
+                    className="min-h-[400px] bg-black/40 border-white/10 text-xs font-mono leading-relaxed text-white/80 focus-visible:ring-0"
+                  />
+                </div>
+
+                <Button variant="ghost" onClick={reset} className="w-full text-white/40 hover:text-white uppercase text-xs font-bold tracking-widest py-6">
+                  <RefreshCcw className="w-3 h-3 mr-2" /> Generar otro escenario
                 </Button>
               </div>
             )}
@@ -315,10 +315,13 @@ export const MundialifyApp: React.FC = () => {
 
           <div className="flex items-start gap-3 p-4 bg-panini-midnight/60 border border-white/5 rounded-xl">
              <Info className="w-5 h-5 text-panini-yellow shrink-0 mt-1" />
-             <p className="text-[11px] text-muted-foreground leading-relaxed uppercase font-medium">
-               El generador AI analiza tu rostro y lo integra en la indumentaria oficial de la selección de {formData.team}. 
-               Toda la plaqueta de datos es renderizada directamente por Gemini Vision Pro.
-             </p>
+             <div className="space-y-1">
+                <p className="text-[11px] text-white font-bold uppercase tracking-wider">Modo Ingeniero de Software</p>
+                <p className="text-[10px] text-muted-foreground leading-relaxed uppercase font-medium">
+                  Este entorno extrae la lógica de negocio multia-agente. El prompt resultante integra las reglas de indumentaria, 
+                  branding Panini y variables biométricas dinámicas de {formData.team}.
+                </p>
+             </div>
           </div>
         </div>
       </div>

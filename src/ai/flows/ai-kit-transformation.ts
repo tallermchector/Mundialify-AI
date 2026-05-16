@@ -1,8 +1,8 @@
 'use server';
 /**
- * @fileOverview Un flujo de Genkit para generar un cromo oficial de cualquier selección nacional.
+ * @fileOverview Un flujo de Genkit para generar el prompt de un cromo oficial.
  *
- * - transformPhotoWithKit - Función que maneja el proceso de transformación por IA.
+ * - transformPhotoWithKit - Función que devuelve el prompt final construido.
  * - AiKitTransformationInput - Tipo de entrada para la función.
  * - AiKitTransformationOutput - Tipo de salida para la función.
  */
@@ -27,9 +27,9 @@ const AiKitTransformationInputSchema = z.object({
 export type AiKitTransformationInput = z.infer<typeof AiKitTransformationInputSchema>;
 
 const AiKitTransformationOutputSchema = z.object({
-  transformedPhotoDataUri: z
+  generatedPrompt: z
     .string()
-    .describe('El cromo final generado por IA como data URI.'),
+    .describe('El prompt final construido dinámicamente para ser mostrado.'),
 });
 export type AiKitTransformationOutput = z.infer<typeof AiKitTransformationOutputSchema>;
 
@@ -62,7 +62,7 @@ DISEÑO FIJO DE LA FIGURITA (Estructura base):
 - Bandera oficial de ${d.team} en posición vertical o integrada estéticamente sobre el lateral derecho del cromo.
 - Plaqueta inferior estilizada con bordes redondeados conteniendo:
   · Nombre en mayúsculas: "${d.name}" (apellido destacado en negrita).
-  · Línea con datos métricos: "${d.birth} | ${d.height}m | ${d.weight}kg".
+  · Línea con datos métricos: "${d.birth} | ${d.height} | ${d.weight}".
   · Sub-plaqueta con el club actual del jugador: "${d.club}".
 - Logo "Panini" clásico en la esquina inferior derecha (rectángulo amarillo con texto azul).
 - Iluminación frontal de estudio, estilo retrato de cromo deportivo, alta nitidez, look fotográfico oficial.
@@ -99,25 +99,11 @@ const aiKitTransformationFlow = ai.defineFlow(
     outputSchema: AiKitTransformationOutputSchema,
   },
   async (input) => {
+    // Simplemente devolvemos el prompt construido
     const dynamicPrompt = buildPrompt(input);
 
-    const {media} = await ai.generate({
-      model: 'googleai/gemini-2.5-flash-image',
-      prompt: [
-        { text: dynamicPrompt },
-        { media: { url: input.photoDataUri } },
-      ],
-      config: {
-        responseModalities: ['TEXT', 'IMAGE'],
-      },
-    });
-
-    if (!media || !media.url) {
-      throw new Error('No se pudo generar la imagen del cromo.');
-    }
-
     return {
-      transformedPhotoDataUri: media.url,
+      generatedPrompt: dynamicPrompt,
     };
   }
 );
