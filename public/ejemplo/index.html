@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google-site-verification" content="fxFDintvXAgP91evpC_yUUB9AtK2uVlnD8niDiVTHMk"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Figurita Mundial — Generador de CROMOS/FIGURITAS con IA Gratis</title>
+        <meta name="description" content="Creá tu propia figurita del Mundial de diferentes ediciones con Inteligencia Artificial. Quitá el fondo de tu foto automáticamente, elegí tu país y descargá en alta resolución. Gratis.">
+        <meta name="keywords" content="figurita mundial, generador cromo/figuritas gratis, cromo mundial 2026, figurita panini argentina, quitar fondo foto ia, world cup 2026 sticker, figurita personalizada, generador figuritas futbol">
+        <meta name="author" content="Baltasar Ferreyra Peuser">
+        <meta name="robots" content="index, follow">
+        <meta name="theme-color" content="#43c4c9">
+        <link rel="canonical" href="https://mundialhub.vercel.app/">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="es_AR">
+        <meta property="og:url" content="https://mundialhub.vercel.app/">
+        <meta property="og:site_name" content="MundialHub 2026">
+        <meta property="og:title" content="Figurita Mundial — Generador con IA Gratis">
+        <meta property="og:description" content="Creá tu propia figurita del Mundial con IA. Subí tu foto, elegí tu país y descargá en alta resolución. ¡100% gratis!">
+        <meta property="og:image" content="https://mundialhub.vercel.app/frontend/assets/og-preview.png">
+        <meta property="og:image:width" content="1650">
+        <meta property="og:image:height" content="2310">
+        <meta property="og:image:alt" content="Ejemplo de figurita del Mundial 2026 generada con IA">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Figurita Mundial 2026 — Generador Panini con IA Gratis">
+        <meta name="twitter:description" content="Creá tu propia figurita del Mundial 2026 con IA. Gratis y en alta resolución.">
+        <meta name="twitter:image" content="https://mundialhub.vercel.app/frontend/assets/og-preview.png">
+        <meta name="twitter:image:alt" content="Figurita del Mundial 2026 generada con IA">
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Figurita Mundial 2026 — Generador Panini con IA","url":"https://mundialhub.vercel.app/","description":"Generador gratuito de figuritas del Mundial 2026 estilo Panini con Inteligencia Artificial.","applicationCategory":"UtilitiesApplication","browserRequirements":"Requires JavaScript","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"ARS"},"inLanguage":"es-AR","image":"https://mundialhub.vercel.app/frontend/assets/og-preview.png","author":{"@type":"Person","name":"Baltasar","url":"https://www.linkedin.com/in/baltasar-ferreyra-peuser-8840a41b4/"},"creator":{"@type":"Organization","name":"MundialHUB","address":{"@type":"PostalAddress","addressLocality":"Córdoba","addressCountry":"AR"}}}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Cómo creo mi figurita del Mundial 2026?","acceptedAnswer":{"@type":"Answer","text":"Subís tu foto, la IA quita el fondo automáticamente, elegís tu país, personalizás los colores y tus datos, y descargás el PNG en alta resolución listo para imprimir."}},{"@type":"Question","name":"¿Es gratis el generador de figuritas?","acceptedAnswer":{"@type":"Answer","text":"Sí, el generador de figuritas del Mundial 2026 es completamente gratuito."}},{"@type":"Question","name":"¿Qué países están disponibles?","acceptedAnswer":{"@type":"Answer","text":"Están disponibles todos los países clasificados al Mundial 2026, incluyendo Argentina, Brasil, México, España, Francia y más."}}]}</script>
+
+        <link rel="icon" type="image/png" href="https://mundialhub.vercel.app/frontend/assets/favicon.png">
+        <link rel="apple-touch-icon" href="https://mundialhub.vercel.app/frontend/assets/favicon.png">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <style>
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0
+            }
+            html {
+                overflow-x: clip
+            }
+            body {
+                font-family: 'Barlow', sans-serif;
+                background: #fff;
+                color: #000;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                -webkit-text-size-adjust: 100%;
+                overflow-x: clip;
+                width: 100%
+            }
+            .skip-link {
+                position: absolute;
+                left: 12px;
+                top: -100px;
+                z-index: 10000;
+                padding: 10px 16px;
+                background: #000;
+                color: #fff;
+                font-weight: 800;
+                font-size: 13px;
+                text-decoration: none;
+                border: 3px solid #000;
+                border-radius: 10px;
+                transition: top 0.2s
+            }
+            .skip-link:focus {
+                top: 12px;
+                outline: none
+            }
+            .page {
+                flex: 1 0 auto;
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 100%;
+                padding: 20px 20px 0;
+                position: relative;
+                z-index: 1
+            }
+            .rainbow-bar {
+                height: 8px;
+                width: 100%;
+                margin-bottom: 26px;
+                background: linear-gradient(to right,#2651ff 0% 16.6%,#ea0001 16.6% 33.2%,#e5ff00 33.2% 49.8%,#6d00fc 49.8% 66.4%,#019afa 66.4% 83%,#00c93b 83% 100%)
+            }
+            header {
+                border-bottom: 3px solid #000;
+                padding-bottom: 24px;
+                margin-bottom: 28px;
+                position: relative;
+                overflow: hidden
+            }
+            header h1 {
+                font-size: clamp(1.8rem, 6vw, 4.5rem);
+                line-height: .88;
+                letter-spacing: -0.03em;
+                text-transform: uppercase;
+                color: #000;
+                margin-bottom: 12px;
+                padding-left: 16px
+            }
+            .layout {
+                display: flex;
+                gap: 32px;
+                align-items: stretch;
+                min-width: 0
+            }
+            .controls {
+                flex: 0 0 320px;
+                width: 320px;
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 16px
+            }
+            .preview {
+                flex: 1;
+                min-width: 0
+            }
+            .preview-sticky {
+                position: sticky;
+                top: 16px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                overflow: visible;
+                z-index: 4;
+                width: 100%
+            }
+            .canvas-wrap {
+                border-radius: 28px;
+                border: 4px solid #000;
+                overflow: hidden;
+                box-shadow: 10px 10px 0 #17277f;
+                width: 100%;
+                max-width: 420px
+            }
+            #cv-2026 {
+                display: block;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1650 / 2310;
+                background: #43c4c9
+            }
+            #cv-qatar {
+                display: block;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 2994 / 3960;
+                background: #5a0a28
+            }
+            #cv-extra {
+                display: block;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 2994 / 3960;
+                background: #7c4177
+            }
+            #cv-rusia {
+                display: block;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 2994 / 3960;
+                background: #7c4177
+            }
+            @media(max-width:680px) {
+                .layout {
+                    flex-direction: column-reverse;
+                    gap: 18px
+                }
+                .controls {
+                    flex: none;
+                    width: 100%;
+                    max-width: 100%
+                }
+                .canvas-wrap {
+                    max-width: 100%;
+                    width: 100%
+                }
+            }
+        </style>
+
+
+        <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+        <!-- Google Fonts no-bloqueante -->
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+        <noscript><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Barlow:wght@400;600;800&display=swap" rel="stylesheet"></noscript>
+    </head>
+    <body class="generador-page amplify-hero-bg preload">
+        <a class="skip-link" href="#contenido-principal">Ir al contenido</a>
+
+        <div class="page" id="contenido-principal">
+            <div class="rainbow-bar" aria-hidden="true"></div>
+
+            <header>
+                <h1>Creá tu Figurita del Mundial</h1>
+                <p class="header-sub">Generador CROMO/FIGURITA con Inteligencia Artificial · Gratis · Alta Resolución</p>
+            </header>
+
+            <section class="how-to" aria-label="Pasos para crear tu figurita">
+                <h2>¿Cómo crear tu cromo del Mundial?</h2>
+                <ol>
+                    <li>
+                        <strong>Elegi el mundial</strong>
+                        - Hay varios diseños para elegir</li>
+                    <li>
+                        <strong>Subí tu foto</strong>
+                        — Usá
+                        <a href="https://www.iloveimg.com/remove-background" target="_blank" rel="noopener noreferrer">IloveBG</a>
+                        gratis para quitar el fondo y después subila acá</li>
+                    <li>
+                        <strong>Personalizá tu figurita</strong>
+                        — Elegí tu país, colores y escribí tu nombre y datos</li>
+                    <li>
+                        <strong>Descargá gratis</strong>
+                        — PNG en alta resolución listo para imprimir o compartir en redes</li>
+                </ol>
+            </section>
+
+            <div class="layout">
+
+                <aside class="controls" aria-label="Panel de personalización">
+
+                    <div class="world-cup-selector">
+                        <button class="wc-arrow" id="wcPrev" aria-label="Anterior">&#8592;</button>
+                        <div class="wc-tabs-container" id="wcTabsContainer"></div>
+                        <button class="wc-arrow" id="wcNext" aria-label="Siguiente">&#8594;</button>
+                    </div>
+
+                    <div class="card card--purple" data-card-num="01">
+                        <h3>Foto del jugador</h3>
+                        <p class="removebg-tip">💡 Te recomendamos quitar el fondo gratis en
+                            <a href="https://www.iloveimg.com/remove-background" target="_blank" rel="noopener noreferrer">IloveBG</a>
+                            antes de subir tu foto.</p>
+                        <label class="upload-btn upload-direct" for="photoInputDirect">
+                            <span>📁 Subir foto</span>
+                        </label>
+                        <input type="file" id="photoInputDirect" accept="image/*" aria-label="Subir foto">
+                        <div class="sliders">
+                            <div class="srow">
+                                <label for="sScale">Tamaño</label>
+                                <input type="range" id="sScale" min="10" max="300" value="110" aria-label="Escala de la foto">
+                                <span id="vScale">110%</span>
+                            </div>
+                            <div class="srow">
+                                <label for="sY">Vertical</label>
+                                <input type="range" id="sY" min="-2000" max="3000" value="1200" aria-label="Posición vertical de la foto">
+                                <span id="vY">1200</span>
+                            </div>
+                            <div class="srow">
+                                <label for="sX">Horizontal</label>
+                                <input type="range" id="sX" min="-1000" max="1000" value="0" aria-label="Posición horizontal de la foto">
+                                <span id="vX">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="editionControlsSlot"></div>
+
+                    <div class="card card--blue" data-card-num="04" id="cardDatos">
+                        <h3>Datos del jugador</h3>
+                        <div class="frow">
+                            <label for="tName">Nombre</label>
+                            <input type="text" id="tName" value="TU NOMBRE" placeholder="NOMBRE" aria-label="Nombre del jugador">
+                        </div>
+                        <div class="frow">
+                            <label for="inDay">Nacimiento</label>
+                            <div style="display: flex; gap: 5px;">
+                                <input type="text" id="inDay" placeholder="D" style="width: 20%; text-align: center;">
+                                <span style="align-self: center;">-</span>
+                                <input type="text" id="inMonth" placeholder="M" style="width: 20%; text-align: center;">
+                                <span style="align-self: center;">-</span>
+                                <input type="text" id="inYear" placeholder="AAAA" style="width: 60%; text-align: center;">
+                            </div>
+                        </div>
+                        <div class="frow">
+                            <label for="tHeight">Altura</label>
+                            <input type="text" id="tHeight" value="1,75" placeholder="1,75" aria-label="Altura del jugador">
+                        </div>
+                        <div class="frow">
+                            <label for="tWeight">Peso</label>
+                            <input type="text" id="tWeight" value="70" placeholder="70" aria-label="Peso del jugador">
+                        </div>
+                        <div class="frow">
+                            <label for="tClub">Club</label>
+                            <input type="text" id="tClub" value="MI CLUB" placeholder="NOMBRE DEL CLUB" aria-label="Club del jugador">
+                        </div>
+                    </div>
+
+                    <div class="card card--green" data-card-num="04">
+                        <h3>País</h3>
+                        <div class="country-search-wrap">
+                            <input type="text" id="countrySearch" placeholder="Buscar país..." autocomplete="off" aria-label="Buscar país para la figurita" aria-controls="countryDropdown">
+                            <div class="country-dropdown" id="countryDropdown" role="listbox" aria-label="Lista de países"></div>
+                        </div>
+                        <div class="selected-country" id="selectedCountry" aria-live="polite">
+                            <img src="https://mundialhub.vercel.app/frontend/assets/flags/miniflags/ARG.png" alt="Bandera de Argentina" class="sc-flag-img" width="36" height="36">
+                            <div class="sc-info">
+                                <span class="sc-name">Argentina</span>
+                                <span class="sc-code">ARG · Grupo K</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="dl-btn" id="dlBtn" aria-label="Descargar figurita en PNG de alta resolución">
+                        Descargar PNG
+                    </button>
+                </aside>
+
+                <main class="preview" aria-label="Vista previa de la figurita">
+                    <div class="preview-sticky">
+                        <div class="canvas-wrap">
+                            <canvas id="cv-2026" width="1650" height="2310" role="img" aria-label="Vista previa figurita Mundial 2026" class="edition-canvas active-canvas"></canvas>
+                            <canvas id="cv-qatar" width="2994" height="3960" role="img" aria-label="Vista previa figurita Qatar 2022" class="edition-canvas" style="display:none"></canvas>
+                            <canvas id="cv-extra" width="2994" height="3960" role="img" aria-label="Vista previa Extra Card" class="edition-canvas" style="display:none"></canvas>
+                            <canvas id="cv-rusia" width="2994" height="3960" role="img" aria-label="Vista previa figurita Rusia 2018" class="edition-canvas" style="display:none"></canvas>
+                        </div>
+                        <p class="hint">Vista previa en tiempo real</p>
+                        <button class="dl-btn dl-btn-preview" id="dlBtnMobile" aria-label="Descargar figurita en PNG">Descargar PNG</button>
+                    </div>
+                </main>
+
+            </div>
+            <section class="faq-section" aria-label="Preguntas frecuentes">
+                <h2>Preguntas frecuentes</h2>
+                <details>
+                    <summary>¿Es gratis el generador de figuritas del Mundial 2026?</summary>
+                    <p>Sí, el generador es completamente gratuito. Podés crear y descargar tu figurita sin pagar nada.</p>
+                </details>
+                <details>
+                    <summary>¿Cómo funciona la IA para quitar el fondo?</summary>
+                    <p>Usamos
+                        <strong>rembg</strong>, una tecnología de Inteligencia Artificial que detecta automáticamente la figura humana en tu foto y elimina el fondo en segundos, sin necesidad de editar manualmente.</p>
+                </details>
+                <details>
+                    <summary>¿Qué países puedo elegir para mi figurita?</summary>
+                    <p>Están disponibles todos los seleccionados clasificados al Mundial 2026, incluyendo Argentina, Brasil, México, España, Francia, Alemania y muchos más.</p>
+                </details>
+                <details>
+                    <summary>¿En qué resolución se descarga la figurita?</summary>
+                    <p>La figurita se descarga en alta resolución (1650×2310 px), perfecta para imprimir o compartir en redes sociales.</p>
+                </details>
+            </section>
+
+        </div>
+
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-section support">
+                    <p>¿Te gustó tu figurita?</p>
+                    <p class="support-sub">Podés ayudarme con unos pesitos</p>
+                    <div class="support-buttons">
+                        <a href="https://cafecito.app/proyectofigurita" target="_blank" rel="noopener noreferrer" class="btn-cafecito">Cafecito</a>
+                        <a href="https://www.paypal.com/donate/?hosted_button_id=KSB472RVF55AW" target="_blank" rel="noopener noreferrer" class="btn-paypal">PayPal</a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <nav aria-label="Links legales y de contacto">
+                        <a href="https://mundialhub.vercel.app/frontend/Generador/legal/privacidad.html">Privacidad</a>
+                        <a href="https://mundialhub.vercel.app/frontend/Generador/legal/terminos.html">Términos</a>
+                        <a href="mailto:mundialhub26@gmail.com">Contacto</a>
+                        <a href="https://www.linkedin.com/in/baltasar-ferreyra-peuser-8840a41b4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://x.com/Mundial_Hub26" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+                    </nav>
+                </div>
+                <div class="footer-section credits">
+                    <p>Desarrollado con amor por
+                        <strong>Baltasar</strong>
+                    </p>
+                    <p class="utn-tag">Córdoba, Argentina</p>
+                </div>
+            </div>
+        </footer>
+
+        <div class="share-modal" id="shareModal" role="dialog" aria-modal="true" aria-label="Compartir tu figurita">
+            <div class="share-modal__box">
+                <button class="share-modal__close" id="modalClose" aria-label="Cerrar">✕</button>
+                <h2 class="share-modal__title">¡Tu figurita está lista!</h2>
+                <div class="share-modal__img-wrap">
+                    <img id="shareModalImg" src="" alt="Tu figurita del Mundial 2026" class="share-modal__img" width="140" height="196">
+                </div>
+                <p class="share-modal__sub">Compartila en tus redes o volvé a descargarla</p>
+                <div class="share-modal__buttons">
+                    <button class="share-btn share-btn--tw" id="shareTwitter">
+                        <span class="share-btn__icon">𝕏</span>
+                        Twitter / X
+                    </button>
+                    <button class="share-btn share-btn--wa" id="shareWhatsapp">
+                        <span class="share-btn__icon">💬</span>
+                        WhatsApp
+                    </button>
+                    <button class="share-btn share-btn--ig" id="shareInstagram">
+                        <span class="share-btn__icon">📸</span>
+                        Instagram
+                    </button>
+                </div>
+                <p class="share-modal__ig-tip" id="igTip">📲 La imagen se descargó. Abrí Instagram, creá una historia o post y subila desde tu galería.</p>
+                <button class="share-btn share-btn--dl" id="modalDownload">⬇ Descargar de nuevo</button>
+            </div>
+        </div>
+
+        <script src="i18n.js"></script>
+        <script src="edition-2026.js"></script>
+        <script src="edition-qatar2022.js"></script>
+        <script src="edition-extracard.js"></script>
+        <script src="edition-rusia2018.js"></script>
+        <!-- <script src="shirt-align.js"></script> -->
+        <script src="editor.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+        <script>
+            document.getElementById('dlBtnMobile').addEventListener('click', function () {
+                document.getElementById('dlBtn').click();
+            });
+        </script>
+        <script>
+            requestAnimationFrame(function () {
+                document.body.classList.remove("preload");
+            });
+        </script>
+    </body>
+</html>

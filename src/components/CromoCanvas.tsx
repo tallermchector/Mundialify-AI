@@ -10,7 +10,7 @@ interface CromoCanvasProps {
   photo: string | null;
 }
 
-const EDITION_ASSETS = [
+const LAYER_FILES = [
   { id: 'gold', src: 'https://mundialhub.vercel.app/frontend/assets/fondogold.png' },
   { id: 'marcogold', src: 'https://mundialhub.vercel.app/frontend/assets/marcogold.png'},
   { id: 'num2',   src: 'https://mundialhub.vercel.app/frontend/assets/2.png'                    },
@@ -36,6 +36,7 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
   const [images, setImages] = useState<Record<string, HTMLImageElement>>({});
   const [loading, setLoading] = useState(true);
 
+  // Función de tintado dinámico replicada de la lógica original
   const tint = (src: HTMLImageElement, hex: string) => {
     if (!src) return null;
     const oc = document.createElement('canvas');
@@ -51,16 +52,17 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
 
   useEffect(() => {
     const loadAssets = async () => {
-      // Pre-load fonts to avoid canvas rendering before they are ready
+      // Pre-carga de fuentes personalizadas
       try {
         await document.fonts.load('10pt "FuentePersonalizada"');
         await document.fonts.load('10pt "FuentePersonalizadaAA"');
+        await document.fonts.load('10pt "FuentePersonalizadaStat"');
       } catch (e) {
-        console.warn("Fonts could not be loaded precisely, using fallbacks.");
+        console.warn("Error al cargar fuentes, usando fallbacks.");
       }
 
       const loaded: Record<string, HTMLImageElement> = {};
-      const promises = EDITION_ASSETS.map(asset => {
+      const promises = LAYER_FILES.map(asset => {
         return new Promise((resolve) => {
           const img = new Image();
           img.crossOrigin = 'anonymous';
@@ -85,6 +87,7 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Dimensiones de alta resolución para impresión (1650x2310)
     const W = 1650;
     const H = 2310;
     canvas.width = W;
@@ -94,7 +97,7 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     const FONT_PAIS = '"FuentePersonalizada", "Barlow Condensed", sans-serif';
     const FONT_RESTO = '"FuentePersonalizadaAA", "Barlow Condensed", sans-serif';
     
-    // Tints
+    // Generación de tintes dinámicos
     const tints = {
       num2:   tint(images.num2,   data.c2),
       num6:   tint(images.num6,   data.c6),
@@ -105,23 +108,25 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
       rectB:  tint(images.rectB,  posColor),
     };
 
-    // Draw
+    // --- ORDEN DE DIBUJO ---
     ctx.clearRect(0, 0, W, H);
     ctx.save();
 
-    // Fondo base
+    // 1. Fondo base
     ctx.fillStyle = data.cBg;
     ctx.fillRect(0, 0, W, H);
 
+    // 2. Fondo Dorado (si aplica)
     if (data.useGoldBg && images.gold) {
       ctx.drawImage(images.gold, 0, 0, W, H);
     }
 
+    // 3. Dibujo de capas tintadas del fondo
     if (tints.num2)   ctx.drawImage(tints.num2,   0, 0, W, H);
     if (tints.num6)   ctx.drawImage(tints.num6,   0, 0, W, H);
     if (tints.cosito) ctx.drawImage(tints.cosito, 0, 0, W, H);
 
-    // Foto Usuario
+    // 4. Foto de Usuario
     if (photo) {
       const userImg = new Image();
       userImg.src = photo;
@@ -144,6 +149,7 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
       });
     }
 
+    // 5. Marco y Capas Superiores
     if (tints.marco) ctx.drawImage(tints.marco, 0, 0, W, H);
 
     if (data.useGoldBg && images.marcogold) {
@@ -151,10 +157,9 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     }
     if (tints.marco6) ctx.drawImage(tints.marco6, 0, 0, W, H);
 
-    // Bandera - Usando ruta de assets o flagcdn como fallback
+    // 6. Bandera Oficial
     const flagImg = new Image();
     flagImg.crossOrigin = 'anonymous';
-    // Prioridad a assets del mundialhub o flags locales si existieran
     flagImg.src = `https://mundialhub.vercel.app/frontend/assets/flags/${data.code.toLowerCase()}.png`;
     
     await new Promise((resolve) => {
@@ -163,24 +168,20 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
         resolve(true);
       };
       flagImg.onerror = () => {
-        // Fallback a FlagCDN si falla el servidor principal
-        flagImg.src = `https://flagcdn.com/w160/${data.code.toLowerCase() === 'en-gb' ? 'gb' : data.code.toLowerCase().slice(0, 2)}.png`;
-        flagImg.onload = () => {
-          // Nota: El dibujo de la bandera desde flagcdn requeriría una posición específica en el canvas
-          // pero aquí asumimos la estructura de la imagen de capa completa.
-          resolve(true);
-        };
+        // Fallback flagcdn
+        flagImg.src = `https://flagcdn.com/w160/${data.code.toLowerCase() === 'arg' ? 'ar' : data.code.toLowerCase().slice(0, 2)}.png`;
+        flagImg.onload = () => resolve(true);
         flagImg.onerror = resolve;
       };
     });
 
-    // Código País (Vertical)
+    // 7. Código de País Vertical (con stroke + fill)
     ctx.save();
     data.code.toUpperCase().slice(0, 3).split('').forEach((l: string, i: number) => {
       ctx.font         = `900 220px ${FONT_PAIS}`;
       ctx.textAlign    = 'center';
       ctx.textBaseline = 'alphabetic';
-      ctx.fillStyle    = 'white';
+      ctx.fillStyle    = 'transparent';
       ctx.strokeStyle  = 'rgba(255,255,255,1)';
       ctx.lineWidth    = 8.00;
       ctx.strokeText(l, W - 207, 1729 + i * 175);
@@ -188,15 +189,15 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     });
     ctx.restore();
 
-    // Rectángulos de posición
+    // 8. Rectángulos de Posición
     if (tints.rectA) ctx.drawImage(tints.rectA, 81, 1900, 1183, 207);
     if (tints.rectB) ctx.drawImage(tints.rectB, 81, 2130, 1022, 98);
 
-    // Logos
+    // 9. Logos FIFA y Panini
     if (images.fifa)   ctx.drawImage(images.fifa,   1251,  121,  285, 436);
     if (images.panini) ctx.drawImage(images.panini, 1124, 2130,  414,  98);
 
-    // Textos finales
+    // 10. Bloque de Textos (Nombre, Stats, Club)
     const cleanDate = `${data.day}-${data.month}-${data.year}`;
     const cleanHeight = formatHeight(data.height);
     const cleanWeight = formatWeight(data.weight);
@@ -205,12 +206,12 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     ctx.textAlign = 'center';
     const cx = 88 + 1166 / 2;
     
-    // Nombre
+    // Nombre (Apellido destacado conceptualmente por la fuente bold)
     ctx.font = `700 88px ${FONT_RESTO}`;
     ctx.fillStyle = '#fff';
     ctx.fillText(data.name.toUpperCase(), cx, H - 316.8, 1166);
     
-    // Stats
+    // Estadísticas
     ctx.font = `400 66px ${FONT_RESTO}`;
     ctx.fillText(`${cleanDate}  |  ${cleanHeight} m  |  ${cleanWeight} kg`, cx, H - 233.4, 1166);
     
@@ -239,7 +240,7 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
     return (
       <div className="flex flex-col items-center justify-center gap-4 w-[400px] h-[550px] bg-panini-midnight rounded-xl border-4 border-white/5">
         <Loader2 className="w-12 h-12 text-panini-yellow animate-spin" />
-        <p className="text-white font-headline font-bold uppercase tracking-tighter text-sm">Cargando Activos 2026...</p>
+        <p className="text-white font-headline font-bold uppercase tracking-tighter text-sm">Cargando Motor 2026...</p>
       </div>
     );
   }
@@ -261,7 +262,7 @@ export const CromoCanvas: React.FC<CromoCanvasProps> = ({ data, photo }) => {
           className="w-full bg-green-600 hover:bg-green-700 text-white font-headline font-bold uppercase py-6"
         >
           <Download className="w-5 h-5 mr-2" />
-          Descargar Cromo (HQ)
+          Descargar Cromo Pro (HQ)
         </Button>
       )}
     </div>
